@@ -1,3 +1,6 @@
+// Daily Motivational Quote Generator
+
+// Arrays of message components
 const greetings = [
   "Good morning", 
   "Hello", 
@@ -23,10 +26,12 @@ const closings = [
   "Keep pushing forward!"
 ];
 
+// Function: Get a random item from an array
 function getRandomElement(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+// Function: Build a complete motivational message
 function createMotivationalMessage() {
   const greeting = getRandomElement(greetings);
   const quote = getRandomElement(quotes);
@@ -34,4 +39,5 @@ function createMotivationalMessage() {
   return `${greeting}! ${quote} ${closing}`;
 }
 
+// Display the generated message
 console.log(createMotivationalMessage());
