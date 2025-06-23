@@ -1,4 +1,4 @@
-daily-motivational-quote-generator
+# Daily Motivational Quote Generator
 
 The Daily Motivational Quote Generator is a simple JavaScript program that provides users with an inspiring and uplifting message each time it runs. Designed to run locally in a Node.js environment, the program randomly selects a greeting, a motivational quote, and a closing encouragement from predefined lists, combining them into a unique message displayed in the console.
 
