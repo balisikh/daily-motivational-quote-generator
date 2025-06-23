@@ -1,5 +1,10 @@
 // Daily Motivational Quote Generator
 
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
 // Arrays of message components
 const greetings = [
   "Good morning", 
@@ -31,13 +36,16 @@ function getRandomElement(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-// Function: Build a complete motivational message
-function createMotivationalMessage() {
+// Function: Build a complete motivational message with name
+function createMotivationalMessage(name) {
   const greeting = getRandomElement(greetings);
   const quote = getRandomElement(quotes);
   const closing = getRandomElement(closings);
-  return `${greeting}! ${quote} ${closing}`;
+  return `${greeting}, ${name}! ${quote} ${closing}`;
 }
 
-// Display the generated message
-console.log(createMotivationalMessage());
+// Ask user for their name and then display the message
+readline.question("What's your name? ", function(name) {
+  console.log(createMotivationalMessage(name));
+  readline.close();
+});
