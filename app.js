@@ -44,7 +44,7 @@ function createMotivationalMessage(name) {
   return `${greeting}, ${name}! ${quote} ${closing}`;
 }
 
-// Ask user for their name and then display the message
+// Ask user for their name and display the message
 readline.question("What's your name? ", function(name) {
   console.log(createMotivationalMessage(name));
   readline.close();
